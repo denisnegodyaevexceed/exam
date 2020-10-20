@@ -11,6 +11,7 @@ if (number === 1) {
 if (number === 2 || number === 3) {
   alert('Вы ввели число 2, а может и 3');
 }*/
+
 let num = +prompt('Введите число от 0 до 3', '');
 switch (num) {
     case 0:
