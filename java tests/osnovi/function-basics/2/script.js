@@ -6,6 +6,5 @@ function min(a, b) {
     }
 }
 
-
 let result = min(22, 44);
 alert(result);
