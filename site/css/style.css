@@ -109,7 +109,6 @@ form {
 }
 
 .footer {
-    text-align: center;
     margin-top: 150px;
     display: flex;
     margin: 0 auto;
@@ -120,6 +119,7 @@ form {
 }
 
 .footer-element {
+    text-align: center;
     margin-top: 50px;
     flex-wrap: wrap;
     align-items: center;
