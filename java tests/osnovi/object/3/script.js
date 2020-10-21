@@ -4,7 +4,7 @@ let salaries = {
     Pete: 130
 };
 let sum = 0;
-for (let key in salaries) {
-    sum += salaries[key];
+for (let prop in salaries) {
+    sum = sum + salaries[prop];
 }
 alert(sum);
