@@ -1,6 +1,6 @@
-function isEmpty(obj) {
-    for (let prop in obj) {
-        return false;
-    }
-    return true;
-}
+let obj = {
+    name: "John",
+    age: 30,
+    isAdmin: true
+};
+alert(!Object.keys(obj))
