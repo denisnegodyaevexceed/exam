@@ -1,2 +1,6 @@
+// Простая страница
+// важность: 4
+// Создайте страницу, которая спрашивает имя у пользователя и выводит его.
+
 let name = prompt("Vvedite imya", '');
-alert('Vashe imya ' +name);
+alert('Vashe imya ' + name);

@@ -1,3 +1,7 @@
+// Напишите "if", аналогичный "switch"
+// важность: 5
+// Напишите if..else, соответствующий следующему switch:
+
 /*switch (browser) {
     case 'Edge':
       alert( "You've got the Edge!" );
