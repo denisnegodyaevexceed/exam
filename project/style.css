@@ -9,7 +9,7 @@ body {
 .container {
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: auto;
     height: 100vh;
 }
 
@@ -46,7 +46,6 @@ body {
     top: auto;
     z-index: 333333;
     box-shadow: 0 0 15px yellow;
-    /* Параметры тени */
 }
 
 .main_char {
