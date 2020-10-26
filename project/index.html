@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@800&display=swap" rel="stylesheet">
+    <title>Star Wars</title>
+</head>
+
+
+
+<body>
+
+    <div class="container">
+        <img class="logo" src="img/logo.png" alt="">
+    </div>
+    <div class="main_char">
+
+        <div class="char"></div>
+
+
+    </div>
+
+    <div class="general">
+        <div class="modal" id="mymodal">
+            <div class="modal_content">
+                <div class="hero_info"></div>
+                <div class="modal_height"></div>
+                <div class="modal_user"></div>
+                <span class="close_modal_window">   </span>
+                <p></p>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="button">
+            <!-- <button class="nazad">Назад</button> -->
+            <div class="next">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <button class="nazad"></button> -->
+
+    <script src="script.js"></script>
+
+    <script>
+        let modal = document.getElementById('mymodal');
+        let btn = document.querySelector('.char')
+        let closeApp = document.getElementsByClassName('close_modal_window')[0];
+        let closeAppP = document.querySelector('.items_post');
+
+
+        // btn.onclick = function() {
+        //     modal.style.display = "block";
+        // }
+
+        btn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        closeApp.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+                document.querySelector('.modal_content').innerHTML = '';
+            }
+
+        }
+    </script>
+</body>
+
+</html>
