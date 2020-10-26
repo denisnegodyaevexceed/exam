@@ -1,11 +1,36 @@
-// Перемешайте массив
-// важность: 3
-// Напишите функцию shuffle(array), которая перемешивает (переупорядочивает случайным образом) элементы массива.
+// Отсортировать пользователей по возрасту
+// важность: 5
+// Напишите функцию sortByAge(users), которая принимает массив объектов со свойством age и сортирует их по нему.
 
-function shuffle(array) {
-    array.sort(() => (Math.random() - 0.5));
+// Например:
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+
+// let arr = [ vasya, petya, masha ];
+
+// sortByAge(arr);
+
+// // теперь: [vasya, masha, petya]
+// alert(arr[0].name); // Вася
+// alert(arr[1].name); // Маша
+// alert(arr[2].name); // Петя
+
+
+
+function sortByAge(arr) {
+    arr.sort((a, b) => a.age > b.age ? 1 : -1);
 }
 
-let array = [1, 2, 3, 4, 5, 6, 7];
-shuffle(array);
-alert(array);
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 28 };
+
+let arr = [vasya, petya, masha];
+
+sortByAge(arr);
+
+alert(arr[0].name); // Вася
+alert(arr[1].name); // Маша
+alert(arr[2].name); // Петя
