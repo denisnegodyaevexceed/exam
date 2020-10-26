@@ -42,7 +42,7 @@ async function getResponse(i) {
             <div class="text_user">                 
             <div class = "items_post${idx}" id='${element.name}' onClick="test()">${element.name} </div>
             </div>  
-            </div>
+                                </div>
             `
 
 
