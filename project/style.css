@@ -9,7 +9,7 @@ body {
 .container {
     display: flex;
     align-items: center;
-    width: auto;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -45,7 +45,8 @@ body {
     left: auto;
     top: auto;
     z-index: 333333;
-    box-shadow: 0 0 15px yellow;
+    box-shadow: 0 0 50px yellow;
+    /* Параметры тени */
 }
 
 .main_char {
@@ -89,6 +90,7 @@ body {
 .hero {
     width: 200px;
     height: 200px;
+    box-shadow: 0 0 30px whitesmoke;
 }
 
 .hero2 {
@@ -96,6 +98,7 @@ body {
     width: 200px;
     height: 200px;
     transition: .2s;
+    box-shadow: 0 0 20px whitesmoke;
 }
 
 .hero2:hover {
@@ -129,6 +132,7 @@ body {
     margin: -16px 0;
     animation: next 2s infinite;
     cursor: pointer;
+    box-shadow: 0 0 10px whitesmoke;
 }
 
 .next span:nth-child(2) {

@@ -51,17 +51,10 @@ async function getResponse(i) {
 
 
 }
-
-
-
-
-
-
-
 next.addEventListener("click", function() {
 
-    if (j >= 9) {
-        document.querySelector('.next').innerHTML = ''; // удалили DIV
+    if (j >= 1000) {
+        // document.querySelector('.next').innerHTML = ''; // удалили DIV
     } else {
 
         j = j + 1;
