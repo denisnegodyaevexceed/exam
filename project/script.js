@@ -81,6 +81,10 @@ next.addEventListener("click", function() {
 // });
 
 
+
+
+
+
 // nazad.addEventListener("click", function() {
 
 // });

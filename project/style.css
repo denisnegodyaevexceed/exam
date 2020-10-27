@@ -13,6 +13,13 @@ body {
     height: 100vh;
 }
 
+@media screen and (max-width: 400px) {
+    .container {
+        width: 400px;
+        height: 900px;
+    }
+}
+
 .logo {
     margin: 0 auto;
     width: 400px;
@@ -39,9 +46,9 @@ body {
     width: 40%;
     min-width: 375px;
     height: 35%;
-    max-height: 600px;
+    max-height: 300px;
     margin: 0 auto;
-    margin-top: 15%;
+    margin-top: 12%;
     left: auto;
     top: auto;
     z-index: 333333;
@@ -49,8 +56,20 @@ body {
     /* Параметры тени */
 }
 
+@media screen and (max-width: 1024px) {
+    .modal_content {
+        margin-top: 50%;
+    }
+}
+
 .main_char {
     width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+    .main_char {
+        width: 400px;
+    }
 }
 
 .char {
@@ -59,9 +78,9 @@ body {
     flex-wrap: wrap;
     justify-content: start;
     align-self: center;
+    margin: 0 auto;
     text-align: center;
     cursor: pointer;
-    margin: 0 auto;
     margin-bottom: 0px;
 }
 
@@ -87,10 +106,97 @@ body {
     font-size: 24px;
 }
 
+
+/* @media screen and (min-width: 320px) {
+    .hero_info {
+        font-size: 9px;
+    }
+} */
+
+@media screen and (max-width: 400px) {
+    .hero_info {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1094px) {
+    .hero_info {
+        font-size: 25px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero_info {
+        font-size: 20px;
+        margin-top: 100px;
+        ;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero_info {
+        margin-top: 72px;
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .hero_info {
+        margin-top: 75px;
+        font-size: 18px;
+    }
+}
+
 .hero {
     width: 200px;
     height: 200px;
     box-shadow: 0 0 30px whitesmoke;
+}
+
+@media screen and (max-width: 400px) {
+    .hero {
+        margin-top: 30px;
+        margin-left: 20px;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 1392px) {
+    .hero {
+        margin-bottom: 20px;
+        margin-left: 20px;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero {
+        margin-top: 40px;
+        margin-left: 25px;
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero {
+        margin-top: 33px;
+        margin-left: 25px;
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .hero {
+        margin-top: 10px;
+        margin-left: 25px;
+        width: 130px;
+        height: 130px;
+    }
 }
 
 .hero2 {
@@ -99,6 +205,10 @@ body {
     height: 200px;
     transition: .2s;
     box-shadow: 0 0 20px whitesmoke;
+}
+
+.box_image {
+    margin: 0 auto;
 }
 
 .hero2:hover {
@@ -158,9 +268,9 @@ body {
 }
 
 .close {
-    position: fixed;
-    top: 290px;
-    width: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
     height: 50px;
     cursor: pointer;
 }
@@ -168,11 +278,11 @@ body {
 .close:before,
 .close:after {
     position: fixed;
-    right: 600px;
+    margin-top: 250px;
     content: ' ';
-    height: 33px;
+    height: 43px;
     width: 3px;
-    background-color: red;
+    background-color: white;
 }
 
 .close:before {
