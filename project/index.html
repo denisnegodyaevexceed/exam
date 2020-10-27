@@ -36,6 +36,7 @@
 
     </div>
     <div class="footer">
+        <div id="upbutton"></div>
         <div class="button">
             <!-- <button class="nazad">Назад</button> -->
             <div class="next">
@@ -50,37 +51,10 @@
 
 
     <!-- <button class="nazad"></button> -->
-
+    <script src="https://code.jquery.com/jquery-git.min.js"></script>
+    <script src="up.js"></script>
     <script src="script.js"></script>
-
-    <script>
-        let modal = document.getElementById('mymodal');
-        let btn = document.querySelector('.char')
-        let closeApp = document.querySelector('.close');
-        let closeAppP = document.querySelector('.items_post');
-
-
-        // btn.onclick = function() {
-        //     modal.style.display = "block";
-        // }
-
-        // btn.onclick = function() {
-        //     modal.style.display = "none";
-        // }
-
-        closeApp.onclick = function() {
-            modal.style.display = "none";
-            document.querySelector('.modal_content').innerHTML = '';
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = 'none';
-                document.querySelector('.modal_content').innerHTML = '';
-            }
-
-        }
-    </script>
+    <script src="hidden.js"></script>
 </body>
 
 </html>
