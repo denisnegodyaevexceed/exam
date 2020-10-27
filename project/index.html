@@ -23,11 +23,13 @@
 
     <div class="general">
         <div class="modal" id="mymodal">
+            <span class="close">  </span>
             <div class="modal_content">
+
                 <div class="hero_info"></div>
                 <div class="modal_height"></div>
                 <div class="modal_user"></div>
-                <span class="close_modal_window">   </span>
+
                 <p></p>
             </div>
         </div>
@@ -54,7 +56,7 @@
     <script>
         let modal = document.getElementById('mymodal');
         let btn = document.querySelector('.char')
-        let closeApp = document.getElementsByClassName('close_modal_window')[0];
+        let closeApp = document.querySelector('.close');
         let closeAppP = document.querySelector('.items_post');
 
 
@@ -62,12 +64,13 @@
         //     modal.style.display = "block";
         // }
 
-        btn.onclick = function() {
-            modal.style.display = "none";
-        }
+        // btn.onclick = function() {
+        //     modal.style.display = "none";
+        // }
 
         closeApp.onclick = function() {
             modal.style.display = "none";
+            document.querySelector('.modal_content').innerHTML = '';
         }
 
         window.onclick = function(event) {

@@ -16,6 +16,7 @@ const test = async() => {
         <img class="hero" src="img/${id}.jpg" alt=""> 
     </div>
         <div class="hero_info">
+        
                                 <div class="modal_name">Имя: ${results[0].name}</div>
                                 <div class="modal_birth_year">Дата рождения: ${results[0].birth_year}</div>
                                 <div class="modal_height">Рост: ${results[0].height}</div>

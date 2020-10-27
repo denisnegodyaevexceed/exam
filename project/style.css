@@ -9,7 +9,7 @@ body {
 .container {
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: auto;
     height: 100vh;
 }
 
@@ -155,4 +155,30 @@ body {
         opacity: 0;
         transform: translate(0, 20px) rotate(45deg);
     }
+}
+
+.close {
+    position: fixed;
+    top: 290px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.close:before,
+.close:after {
+    position: fixed;
+    right: 600px;
+    content: ' ';
+    height: 33px;
+    width: 3px;
+    background-color: red;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
 }
