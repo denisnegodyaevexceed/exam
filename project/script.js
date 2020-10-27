@@ -12,6 +12,7 @@ const test = async() => {
     const { results } = normPeople
     console.log(results[0].height)
     listModal.innerHTML += `
+    
     <div class="img_hero">
         <img class="hero" src="img/${id}.jpg" alt=""> 
     </div>
