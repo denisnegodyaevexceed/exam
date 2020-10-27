@@ -6,3 +6,12 @@
 
 // getSecondsToday() == 36000 // (3600 * 10)
 // Функция должна работать в любой день, т.е. в ней не должно быть конкретного значения сегодняшней даты.
+
+
+function getSecondsToday() {
+    let now = new Date();
+    let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return Math.trunc((now - today) / 1000);
+}
+
+alert(getSecondsToday());
