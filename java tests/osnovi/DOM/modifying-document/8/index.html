@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <table id="table">
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Возраст</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Pete</td>
+            <td>Brown</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Ann</td>
+            <td>Lee</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <script>
+        let elements = document.querySelectorAll('#table td');
+
+        let name = [];
+        let objname = {};
+
+        for (i = 0; i <= elements.length - 3;) {
+            name.push(elements[i].innerHTML);
+            objname[elements[i].innerHTML] = i;
+            i = i + 3;
+        }
+
+        name.sort();
+
+        for (let i = 0; i < name.length; i++) {
+            let tr = document.querySelectorAll('#table td')[objname[name[i]]].parentElement.cloneNode(true);
+            table.append(tr);
+        }
+
+        for (let i = 0; i < name.length; i++) {
+            document.querySelectorAll('#table td')[0].parentElement.remove();
+        }
+    </script>
+
+</body>
+
+</html>
