@@ -1,0 +1,72 @@
+<html>
+
+<body>
+    <style>
+        .hour {
+            color: red;
+            margin: 5px;
+        }
+        
+        .min {
+            color: blue;
+            margin: 5px;
+        }
+        
+        .sec {
+            color: green;
+            margin: 5px;
+        }
+    </style>
+
+    <input type="button" onclick="clockStart()" value="Старт">
+
+
+    <input type="button" onclick="clockStop()" value="Стоп">
+
+    <script>
+        let fragment = new DocumentFragment();
+
+        let clock = document.createElement('div');
+        let hour = document.createElement('span');
+        hour.className = 'hour'
+        hour.innerHTML = '0';
+        let min = document.createElement('span');
+        min.className = 'min'
+        min.innerHTML = '0';
+        let sec = document.createElement('span');
+        sec.className = 'sec'
+        sec.innerHTML = '0';
+
+        fragment.append(hour);
+        fragment.append(min);
+        fragment.append(sec);
+
+        clock.append(fragment)
+
+        let button_start = document.querySelector('input[value="Старт"]')
+        button_start.before(clock)
+
+        let time_hour, time_min, time_sec;
+
+        function clockStart() {
+            time_hour = setInterval(() => hour.innerHTML = new Date().getHours(), 1000);
+            time_min = setInterval(() => min.innerHTML = new Date().getMinutes(), 1000);
+            time_sec = setInterval(() => {
+                if (new Date().getSeconds() < 10) {
+                    sec.innerHTML = "0" + new Date().getSeconds()
+                } else {
+                    sec.innerHTML = new Date().getSeconds()
+                }
+            }, 1000);
+        }
+
+        function clockStop() {
+            clearInterval(time_sec);
+            clearInterval(time_min);
+            clearInterval(time_hour);
+        }
+    </script>
+
+</body>
+
+</html>
