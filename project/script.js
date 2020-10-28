@@ -3,6 +3,11 @@ let nazad = document.querySelector('.nazad')
 let charName = document.querySelector('.items_post');
 let j = 0;
 
+function exitModal() {
+    modal.style.display = "none";
+    document.querySelector('.modal_content').innerHTML = '';
+};
+
 const test = async() => {
     let listModal = document.querySelector('.modal_content');
     const id = event.target.id
@@ -12,10 +17,11 @@ const test = async() => {
     const { results } = normPeople
     console.log(results[0].height)
     listModal.innerHTML += `
-    
+    <div class="close2"> <img class="exit" src="img/close.png" alt="" onClick="exitModal()"></div>
     <div class="img_hero">
         <img class="hero" src="img/${id}.jpg" alt=""> 
     </div>
+    
         <div class="hero_info">
         
                                 <div class="modal_name">Имя: ${results[0].name}</div>
