@@ -1,0 +1,126 @@
+<!-- Создайте календарь в виде таблицы
+важность: 4
+Напишите функцию createCalendar(elem, year, month).
+
+Вызов функции должен создать календарь для заданного месяца month в году year и вставить его в elem.
+
+Календарь должен быть таблицей, где неделя – это <tr>, а день – это <td>. У таблицы должен быть заголовок с названиями дней недели, каждый день – <th>, первым днём недели должен быть понедельник.
+
+Например, createCalendar(cal, 2012, 9) сгенерирует в cal следующий календарь: -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        
+        td,
+        th {
+            border: 1px solid black;
+            padding: 3px;
+            text-align: center;
+        }
+        
+        th {
+            font-weight: bold;
+            background-color: #E6E6E6;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="calendar"></div>
+
+    <script>
+        function createCalendar(elem, year, month) {
+            let table = document.createElement('table');
+            table.innerHTML = `
+<tr>
+<th>Пн</th>
+<th>Вт</th>
+<th>Ср</th>
+<th>Чт</th>
+<th>Пн</th>
+<th>Сб</th>
+<th>Вс</th>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+`
+            let date = new Date(year, month, 0).getDate();
+            let day = new Date(year, month - 1, 1).getDay();
+            let cells = table.getElementsByTagName('td');
+            if (cells.length < (date + (day + 1))) {
+                let addTr = document.createElement('tr');
+                addTr.innerHTML = `
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+`;
+                table.append(addTr);
+            }
+            for (let i = 1; i <= date; i++) {
+                cells[day + i - 1].textContent = i;
+            }
+
+            elem = document.querySelector(elem);
+            elem.append(table);
+        }
+
+        createCalendar('#calendar', 2012, 12)
+    </script>
+
+</body>
+
+</html>
