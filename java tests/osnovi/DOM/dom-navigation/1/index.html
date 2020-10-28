@@ -1,3 +1,21 @@
+<!-- Дочерние элементы в DOM
+важность: 5
+Для страницы:
+
+<html>
+<body>
+  <div>Пользователи:</div>
+  <ul>
+    <li>Джон</li>
+    <li>Пит</li>
+  </ul>
+</body>
+</html>
+Напишите код, как получить…
+
+элемент <div>?
+<ul>?
+второй <li> (с именем Пит)? -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +34,7 @@
     </ul>
     <script>
         for (let i = 0; i < document.body.childNodes.length; i++) {
-            alert(document.body.childNodes[i]);
+            console.log(document.body.childNodes[i]);
         }
     </script>
 </body>
